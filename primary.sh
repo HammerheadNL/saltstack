@@ -2,9 +2,6 @@
 
 # primary.sh
 # Initiële set-up Salt Minion
-#
-# Auteur: Gerard Hoeksema
-# E-mail: g.hoeksema@st.hanze.nl
 
 # Ophalen hostname machine en toevoegen aan lokale hostsfile onder localhost definitie
 configuredHostname="$(hostname)"

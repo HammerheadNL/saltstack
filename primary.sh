@@ -14,3 +14,5 @@ echo $ipAddress>/home/ubuntu/localip.txt
 # Up-to-date brengen van het systeem
 sudo apt update && upgrade -y
 
+# Installeren van Salt Minion pakketten
+sudo apt install salt-minion -y

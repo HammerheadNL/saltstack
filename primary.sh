@@ -5,7 +5,7 @@
 
 # Ophalen hostname machine en toevoegen aan lokale hostsfile onder localhost definitie
 configuredHostname="$(hostname)"
-sudo sed -i.bak '/127.0.0.1 localhost/ i\127.0.0.1 $configuredHostname' /etc/hosts
+sudo sed -i.bak "/127.0.0.1 localhost/ i\127.0.0.1 $configuredHostname" /etc/hosts
 
 # Opslaan van het IP adres voor later gebruik
 ipAddress="$(ip -4 -o address | grep 10.8 | awk '{print $4}' | cut -d/ -f1)"
@@ -20,7 +20,7 @@ sudo apt install salt-minion -y
 
 # Clonen van de GIT repository en overzetten minion configuratie
 sudo git clone https://github.com/HammerheadNL/saltstack.git
-sudo cp -f /home/ubuntu/saltstack/minionconfig/minion /etc/salt
+sudo cp -f /home/ubuntu/saltstack/minion/minion /etc/salt
 
 # Het secundaire set-up script uitvoerbaar maken
 sudo chmod +x /home/ubuntu/saltstack/secondary.sh

@@ -21,6 +21,7 @@ sudo apt install salt-minion -y
 # Clonen van de GIT repository en overzetten minion configuratie
 sudo git clone https://github.com/HammerheadNL/saltstack.git
 sudo cp -f /home/ubuntu/saltstack/minion/minion /etc/salt
+sudo cp -f /home/ubuntu/saltstack/minion/10-rsyslog.conf /etc/rsyslog.d
 
 # Het secundaire set-up script uitvoerbaar maken
 sudo chmod +x /home/ubuntu/saltstack/secondary.sh
